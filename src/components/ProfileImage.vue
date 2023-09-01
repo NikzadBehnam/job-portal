@@ -1,5 +1,5 @@
 <template>
-  <img :src="imageURL" alt="" class="object-contain w-8 h-8 rounded-3xl">
+  <img :src="imageURL" alt="User Profile Image" class="object-contain w-8 h-8 rounded-3xl">
 </template>
 <script>
 import avatarURL from "@/assets/avatar.png"
