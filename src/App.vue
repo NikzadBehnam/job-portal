@@ -3,13 +3,11 @@
 </template>
 
 <script>
-import MainNav from "@/components/MainNav.vue"
+import MainNav from '@/components/MainNav.vue'
 export default {
-  name: "app",
+  name: 'app',
   components: {
     MainNav
   }
 }
 </script>
-
-
