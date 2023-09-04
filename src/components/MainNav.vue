@@ -13,8 +13,7 @@
         </nav>
         <div class="flex items-center h-full ml-auto">
           <profile-image v-if="loggedIn" />
-          <action-button v-else @click="() => loggedIn = !loggedIn" />
-
+          <action-button text="Sign In" v-else @click="() => (loggedIn = !loggedIn)" />
         </div>
       </div>
     </div>
@@ -22,8 +21,8 @@
 </template>
 
 <script>
-import ActionButton from "@/components/ActionButton.vue"
-import ProfileImage from "@/components/ProfileImage.vue"
+import ActionButton from '@/components/ActionButton.vue'
+import ProfileImage from '@/components/ProfileImage.vue'
 export default {
   name: 'MainNav',
   data() {
@@ -37,7 +36,7 @@ export default {
   components: {
     ActionButton,
     ProfileImage
-  },
+  }
   // methods: {
   //   toggleLogin() {
   //     this.loggedIn = !this.loggedIn
