@@ -12,7 +12,10 @@ export default {
     type: {
       type: String,
       required: false,
-      default: "primary"
+      default: "primary",
+      validatore(value) {
+        return ["primary", "secondary"].includes(value)
+      }
     }
   },
   computed: {
