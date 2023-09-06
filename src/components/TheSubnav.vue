@@ -1,7 +1,11 @@
 <template>
   <div class="w-full h-16 bg-white border-b border-solid border-x-brand-gray-1">
     <div class="flex items-center h-full px-8">
-      this is the subnav
+      <div>
+        <!-- <font-awesome-icon :icon="['fas', 'search']" /> -->
+        <font-awesome-icon :icon="['fas', 'magnifying-glass']" class="mr-3 font-light" />
+        <span><span class="text-brand-green-1">1653</span> jobs matched</span>
+      </div>
     </div>
   </div>
 </template>
