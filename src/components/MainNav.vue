@@ -1,6 +1,6 @@
 <template>
-  <header class="w-full text-sm">
-    <div class="fixed top-0 left-0 w-full h-16 bg-white">
+  <header class="flex w-full text-sm">
+    <div class="w-full h-16 bg-white ">
       <div class="flex h-full px-5 mx-auto border-b border-solid flex-nowrap border-brand-gray-1">
         <a :href="url" class="flex items-center h-full text-xl">{{ company }}</a>
         <nav class="h-full ml-28">
@@ -12,11 +12,11 @@
           </ul>
         </nav>
         <div class="flex items-center h-full ml-auto">
-          <profile-image v-if="loggedIn" />
-          <action-button text="Sign In" v-else @click="() => (loggedIn = !loggedIn)" />
+          <profile-image v-if="isLoggedIn" />
+          <action-button text="Sign In" v-else @click="() => (isLoggedIn = !isLoggedIn)" />
         </div>
       </div>
-      <the-subnav />
+      <the-subnav v-if="isLoggedIn" :isLoggedIn="isLoggedIn" />
     </div>
   </header>
 </template>
@@ -32,17 +32,18 @@ export default {
       company: 'Bobo Careers',
       url: 'www.google.com',
       menuItems: ['Team', 'Location', 'Lofe at bob corp', 'How we hire', 'Students', 'Jobs'],
-      loggedIn: false
+      isLoggedIn: false
     }
   },
   components: {
     ActionButton,
     ProfileImage,
     TheSubnav
-  }
+  },
+
   // methods: {
   //   toggleLogin() {
-  //     this.loggedIn = !this.loggedIn
+  //     this.isLoggedIn = !this.isLoggedIn
   //   }
   // }
 }

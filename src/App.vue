@@ -1,13 +1,18 @@
 <template>
-  <main-nav />
+  <div class="flex flex-col">
+    <main-nav />
+    <the-hero />
+  </div>
 </template>
 
 <script>
 import MainNav from '@/components/MainNav.vue'
+import TheHero from '@/components/TheHero.vue';
 export default {
   name: 'app',
   components: {
-    MainNav
+    MainNav,
+    TheHero
   }
 }
 </script>

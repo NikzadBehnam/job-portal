@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full h-16 bg-white border-b border-solid border-x-brand-gray-1">
+  <div class="w-full h-full bg-white border-b border-solid border-x-brand-gray-1">
     <div class="flex items-center h-full px-8">
       <div>
         <!-- <font-awesome-icon :icon="['fas', 'search']" /> -->
@@ -11,7 +11,12 @@
 </template>
 <script>
 export default {
-  name: "TheSubnav"
+  name: "TheSubnav",
+  props: {
+    isLoggedIn: {
+      default: false,
+    }
+  },
 }
 </script>
 <style lang="">
