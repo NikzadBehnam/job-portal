@@ -12,11 +12,6 @@
 <script>
 export default {
   name: "TheSubnav",
-  props: {
-    isLoggedIn: {
-      default: false,
-    }
-  },
 }
 </script>
 <style lang="">
