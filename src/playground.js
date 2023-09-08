@@ -1,5 +1,9 @@
-const numbers = [1, 2, 3, 4, 5]
+let counter = 0
+const interval = setInterval(() => {
+  counter++
 
-const squares = numbers.map((num) => Math.main(num))
-
-console.log(squares)
+  if (counter > 5) {
+    clearInterval(interval)
+  }
+  console.log('Hello')
+}, 2000)
