@@ -9,23 +9,20 @@
   </section>
 </template>
 <script>
+import nextElementInList from "@/utils/nextElementInList.js"
 export default {
   name: "TheHeadline",
   data() {
     return {
       action: "Build",
-      interval: null
+      interval: null,
+      actions: ["Build", "Create", "Design", "Code"]
     }
   },
   methods: {
     changeTitle() {
       this.interval = setInterval(() => {
-        const actions = ["Build", "Create", "Design", "Code"]
-        const curActionIndex = actions.indexOf(this.action)
-        const nextActionIndex = (curActionIndex + 1) % 4; // 4 % 4 is 0
-        const nextAction = actions[nextActionIndex]
-        this.action = nextAction
-
+        this.action = nextElementInList(this.actions, this.action)
       }, 3000);
     }
   },
