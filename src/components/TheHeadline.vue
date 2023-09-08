@@ -1,7 +1,11 @@
 <template >
   <section>
-    <h1><span :class="actionClasses">{{ action }}</span> ipsum dolor sit.</h1>
-    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, quas?.</h2>
+    <h1 class="font-bold tracking-tighter mb-14 text-8xl"><span :class="actionClasses">{{ action
+    }} <br> </span>
+      ipsum
+      dolor
+      sit.</h1>
+    <h2 class="text-3xl font-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, quas?.</h2>
   </section>
 </template>
 <script>
@@ -28,10 +32,7 @@ export default {
   computed: {
     actionClasses() {
       return {
-        build: this.action === "Build",
-        create: this.action === "Create",
-        design: this.action === "Design",
-        code: this.action === "Code",
+        [this.action.toLocaleLowerCase()]: true
       }
     }
   },
