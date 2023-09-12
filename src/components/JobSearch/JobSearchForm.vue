@@ -6,18 +6,14 @@
       <!-- Roll Input -->
       <div class="relative flex flex-1 h-full pr-3 iteme-center">
         <label for="role" class="absolute left-0 -top-10 ">Role</label>
-
-        <input v-model="role" type="text" placeholder="Software engineer"
-          class="w-full text-lg font-normal focus:outline-none">
+        <text-input placeholder="Software engineer" />
       </div>
 
       <!-- location Input -->
       <span class="flex items-center h-full px-3 border-l border-r border-brand-gray-3 bg-brand-gray-2">in</span>
       <div class="relative flex flex-1 h-full pl-3 iteme-center">
         <label for="location" class="absolute left-0 -top-10 ">Where?</label>
-
-        <input v-model="location" type="text" placeholder="Los Angeles"
-          class="w-full text-lg font-normal focus:outline-none">
+        <text-input placeholder="Los Angeles" />
       </div>
 
     </div>
@@ -27,11 +23,13 @@
 
 
 <script>
+import TextInput from "@/components/Shared/TextInput.vue";
 import ActionButton from "@/components/Shared/ActionButton.vue"
 export default {
   name: "JobSearchForm",
   components: {
-    ActionButton
+    ActionButton,
+    TextInput
   },
   data() {
     return {
