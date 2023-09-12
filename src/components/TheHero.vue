@@ -9,8 +9,11 @@
           <the-headline />
           <job-search-form />
         </div>
-        <div class="col-span-5 col-start-7 border border-gray-700">
-          5 col
+        <div class="self-center col-span-5 col-start-7 border border-gray-700 justify-self-center">
+          <!-- https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/2367px-Vue.js_Logo_2.svg.png -->
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/2367px-Vue.js_Logo_2.svg.png"
+            alt="Vue Logo" class="object-contain h-80 w-80">
         </div>
         <div class="col-span-1 col-start-12 border border-gray-700">
           1 col
