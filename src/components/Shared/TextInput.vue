@@ -4,14 +4,15 @@
 <script>
 export default {
   name: "TextInput",
-  data() {
-    return {
-      value: ""
+  props: {
+    value: {
+      type: String,
+      required: true
     }
   },
   methods: {
     handleInput($event) {
-      this.value = $event.target.value
+      this.$emit("value-updated", $event.target.value)
     }
   }
 }
